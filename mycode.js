@@ -37,6 +37,15 @@ var job = 'web developer';
 
 var yourFortune = 'You will be a ' + job + ' in ' + geoLocation + ', and married to ' + partnerName + ' with ' + numOfKids + ' kids.';
 
+function tellFortune(numOfKids, partnerName, geoLocation, job) {
+	var future ='You will be a ' + job + ' in ' + geoLocation + ', and married to ' + partnerName + ' with ' + numOfKids + ' kids.';
+	console.log(future);
+}
+
+tellFortune('1', 'Jon Hamm', 'L.A.', 'actress')
+tellFortune('3', 'Jason Segal', 'Seattle', 'SAHM')
+tellFortune('0', 'Dave Grohl', 'Virginia', 'rockstar') 
+
 
 //Age calculator
 
@@ -73,9 +82,93 @@ outputCelsius = outputCelsius.toFixed (0);
 
 var fToCRandom = 'It is ' + inputFarenheit + '\u00B0F today. That is ' + outputCelsius + '\u00B0C.'
 
+//functions
+
+function myFav() {
+	console.log ('Ryan Gosling is my favorite actor.');
+}
 
 
+//arguments
 
+function callName(firstName, lastName) {
+	console.log ('My name is' + firstName + lastName + '.')
+}
+
+callName(' Erica', ' Ross');
+
+
+//returning values
+
+function callName(firstName, lastName) {
+	return firstName + lastName;
+}
+
+console.log (callName(' Erica', ' Ross'));
+
+//if-else statement
+
+var temperature = 40;
+var humidity = 50;
+
+if (temperature < 50 && humidity < 60) {
+	console.log('Put on a coat.')
+}
+
+else if (temperature < 30) {
+	console.log ('Put on a coat and a hat.')
+}
+
+else if (temperature < 0) {
+	console.log('Just stay inside.')
+}
+
+else {
+	console.log('Wear whatever you want.')
+ }
+
+ 
+ //What number is bigger?
+
+ function greaterNum(num1, num2) {
+ 	if (num1 === num2) {
+ 		console.log('Those numbers are equal')
+ 	}
+
+ 	else if (num1 > num2) {
+ 		return num1;
+ 	}
+
+ 	else if (num2 > num1) {
+ 		return num2;
+ 	}
+
+ 	else {
+ 		console.log('Unable to calculate.');
+ 		return undefined;
+ 	}
+ }
+
+console.log (greaterNum(5,5));
+console.log (greaterNum(10, 5));
+console.log (greaterNum(30,33));
+console.log (greaterNum(7, 'kitty'));
+
+
+//Pluralize
+
+function pluralize (num, word) {
+	if (num != 1 && word != 'sheep' && word != 'mice') {
+		return num + ' ' + word + 's';
+	}
+
+	else {
+		return num + ' ' + word;
+	}
+}
+
+console.log('I have ' + pluralize(10, 'poster'));
+console.log('I have ' + pluralize(3, 'mice'));
 
 
 
